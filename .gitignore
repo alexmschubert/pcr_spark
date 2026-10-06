@@ -218,3 +218,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# SPARK local research artifacts (never commit)
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.csv
+*.tsv
+*.png
+*.jpg
+*.jpeg
+*.pdf
+/data/
+/model_weights/
+/checkpoints/
+/predictions/
+/runs/
