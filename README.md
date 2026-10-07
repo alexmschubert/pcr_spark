@@ -51,3 +51,17 @@ spark-train --help
 ```
 
 for additional training options.
+
+## Example: public qPCR data
+
+A small demo using the public `C60.amp` dataset from the [`chipPCR` package](https://cran.r-project.org/package=chipPCR) is included to test the preprocessing and inference workflow end to end.
+
+The demo requires `Rscript` and a SPARK checkpoint available locally:
+
+```bash
+python examples/run_c60_amp.py --checkpoint /path/to/checkpoint.pth
+```
+
+Results are written to `runs/c60_amp/`.
+
+This example is intended as a functional demonstration of the code, not as a full reproduction of the paper's external-validation analysis. It follows the preprocessing used for these external data, including normalization from the unlabeled example curves and use of the E-gene model input for both assays. The latter is only a model encoding and does not imply that Vimentin or MLC-2v is an E gene.
